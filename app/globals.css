@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary: 220, 98%, 61%;
+  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  --background: #FAFAFA;
+  --card-background: #FFFFFF;
+
+  --text-disabled: #D1D2DA;
+
+  --text-light: #9495A5;
+
+  --text: #494C6B;
+
+  --text-link-active: #3A7CFD;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark{
+  --background: #171823;
+  --card-background: #25273D;
+
+  --text-disabled: #4D5067;
+
+  --text-light: #767992;
+
+  --text: #C8CBE7;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html,body{
+  min-height: 100vh;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text);
 }

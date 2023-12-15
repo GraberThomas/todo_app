@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,12 +9,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      backgroundImage: {},
     },
+    colors: {
+      card: "var(--card-background)",
+      text_disabled: "var(--text-disabled)",
+      text_light: "var(--text-light)",
+      text: "var(--text)",
+      text_link_active: "var(--text-link-active)",
+      background: "var(--background)",
+      primary: "var(--primary)",
+      check_background: "var(--check-background)",
+    }
   },
   plugins: [],
 }
